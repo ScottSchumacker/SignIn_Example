@@ -1,0 +1,124 @@
+/* Setting the style of the button */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #FFFFFF;
+}
+
+/* Styling and animating the title */
+.title {
+    font-size: 25px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.title {
+    animation: fadeInTitle 5s;
+}
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styling the div for the username and password */
+.inputBox {
+    position: relative;
+    width: 250px;
+    font-family: sans-serif;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    background: #FFFFFF;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+/* Animating the placeholder text for the username and password */
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: #FF9F1C;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: white;
+    border-left: 1px solid #FF9F1C;
+    border-right: 1px solid #FF9F1C;
+    letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 1px solid #FF9F1C;
+}
+
+.inputBox {
+    animation: fadeInInput 3s;
+}
+@keyframes fadeInInput {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styling the login button */
+.loginButton a {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    transition: 0.5s;
+}
+
+.loginButton a:hover{
+    background-color: #FF9F1C;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #FF9F1C,
+                0 0 25px #FF9F1C,
+                0 0 50px #FF9F1C,
+                0 0 100px #FF9F1C;
+}
+
+.loginButton {
+    animation: fadeInButton 5s;
+}
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
